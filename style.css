@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+    padding: 15px;
+    /*
+    fontos, hogy container-nél legyen egy max-width, egy margin: auto, hogy középen legyen és egy padding, hogy az elemek, amik benne lesznek 
+    azok eltávolodjanak kicsit a bal oldaltól 
+    */
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 15px;
+    /*
+    fontos, hogy a repeat-nél ha auto-fill akarunk, akkor az lesz az első paramétere, a másik meg mindig egy minmax()
+    jelen esetben annyival tölti majd fel amennyi 230px-es kifér, ha beljebb húzzuk a képernyőt, akkor egyel kevesebbel 
+    */
+}
+
+.user, .box {
+    background-color: #b0edb8;
+    border: 1px solid #90c396;
+    padding: 15px;  
+    text-align: center;
+    /*
+    ha van egy grid-es valami és abban van egy ilyen, box, akkor a szélessege az meg van határozva a grid miatt 
+    meg belerakunk dolgokat olyan magas lesz 
+    fontos még ha szöveget akarunk belerakni akkor legyen egy text-align: center, hogy középre kerüljön
+    */
+}
+
+.user-img {
+    width: 100%;
+}
+
+.user-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.data-box {
+    background-color: white;
+    margin: 5px;
+    border-radius: 4px;
+    padding: 4px;
+}
