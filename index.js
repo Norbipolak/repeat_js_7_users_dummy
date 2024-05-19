@@ -25,3 +25,7 @@ switch(urlObj.path) {
         users.getUser(id);
         break;
 }
+
+/*
+Meg nagyon fontos, hogy a users.js-en class-t csak megcsináltuk és nem ott példányosítottuk, ott csak exportáltuk és itt példányosítottuk 
+*/
